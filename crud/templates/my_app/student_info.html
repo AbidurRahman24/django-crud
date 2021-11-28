@@ -1,0 +1,8 @@
+{% extends "my_app/base.html" %}
+
+{% block body-block %}
+<h1>Name: {{student_info.first_name}} {{student_info.last_name}}</h1>
+<p>Email: {{student_info.email}}</p>
+<p>Phone: {{student_info.phone}}</p>
+<a href="{% url 'my_app:student_update' student_id=student.info.id %}" class='btn btn-pramary'>Update</a>
+{% endblock  %}

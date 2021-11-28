@@ -3,4 +3,15 @@
 {% block body-block %}
 <h1>Hello Index</h1>
 
+{% if student_list  %}
+
+{% for student in student_list %}
+<li>Name: <a href="{% url 'my_app:student_info' student_id=student.id %}"> {{student.first_name}} {{student.last_name}} </a></li>
+{% endfor %}
+{% else  %}
+<h1>No student</h1>
+{% endif%}
+
+
+
 {% endblock  %}
