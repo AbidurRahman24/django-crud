@@ -1,0 +1,17 @@
+{% extends "myApp/base.html" %}
+
+{% block body-block %}
+<h1>Hello Index</h1>
+
+{% if student_list  %}
+
+{% for student in student_list %}
+<li>Name: > {{student.first_name}} {{student.last_name}} </li>
+{% endfor %}
+{% else  %}
+<p>No student</p>
+{% endif%}
+
+
+
+{% endblock  %}
